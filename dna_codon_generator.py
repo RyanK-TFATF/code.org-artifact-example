@@ -29,3 +29,5 @@ while basesGenerated <= 100: # The teacher will specify how many bases to genera
     
     dnaSequence += nextBase # Add the generated base to the dnaSequence string.  
     basesGenerated += 1 # Increment the number of bases generated. 
+
+print(dnaSequence) # Print the sequence to verify proper generation. 
