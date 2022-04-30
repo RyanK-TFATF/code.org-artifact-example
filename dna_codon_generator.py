@@ -5,7 +5,7 @@ import random
 dnaBases = ["A", "G", "C", "T"]
 # Adenine, Guanine, Cytosine, Thymine
 
-dnaCodons = ["ATG", "TAG", "GAT", "TTT"]
+dnaCodons = ["ATG", "TAG", "GAT", "TTT", "AGC"]
 # ATG is the START codon, TAG is one of the stop codons.  
 # Codon information referenced here:  https://www.genome.gov/genetics-glossary/Codon and https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables#Inverse_DNA_codon_table
 
@@ -30,28 +30,10 @@ while basesGenerated <= 100: # The teacher will specify how many bases to genera
     dnaSequence += nextBase # Add the generated base to the dnaSequence string.  
     basesGenerated += 1 # Increment the number of bases generated. 
 
-print(dnaSequence) # Print the sequence to verify proper generation. 
-
-"""
-if dnaSequence.find(dnaCodons[0]) == -1: # .find() returns -1 if not found. 
-    print(f"The {dnaCodons[0]} codon was NOT found in the generated sequence.\n")
-else: 
-    print(f"The {dnaCodons[0]} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodons[0])}.\n") # Return the index of the first instance of the codon.  
-
-if dnaSequence.find(dnaCodons[1]) == -1:
-    print(f"The {dnaCodons[1]} codon was NOT found in the generated sequence.\n")
-else: 
-    print(f"The {dnaCodons[1]} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodons[1])}.\n")
-"""
+print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 
 
 for i in range(0, len(dnaCodons)):
     if dnaSequence.find(dnaCodons[i]) == -1: # .find() returns -1 if not found. 
         print(f"The {dnaCodons[i]} codon was NOT found in the generated sequence.\n")
     else: 
         print(f"The {dnaCodons[i]} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodons[i])}.\n") # Return the index of the first instance of the codon.  
-    """
-    if dnaSequence.find(dnaCodons[i]) == -1:
-        print(f"The {dnaCodons[i]} codon was NOT found in the generated sequence.\n")
-    else: 
-        print(f"The {dnaCodons[i]} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodons[i])}.\n")
-    """ 
