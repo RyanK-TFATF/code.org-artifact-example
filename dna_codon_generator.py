@@ -15,7 +15,7 @@ dnaSequence = ""
 basesGenerated = 0
 # Variable to count how many bases have been generated. 
 
-while basesGenerated <= 100: # The teacher will specify how many bases to generate.  
+while basesGenerated <= 100000: # The teacher will specify how many bases to generate.  
     randomBase = int(random.randint(1,4)) # This simulates rolling the d4 to get a random number. 
 
     if randomBase == 1:
@@ -32,7 +32,12 @@ while basesGenerated <= 100: # The teacher will specify how many bases to genera
 
 print(dnaSequence) # Print the sequence to verify proper generation. 
 
-if dnaSequence.find(dnaCodons[0]) == -1:
+if dnaSequence.find(dnaCodons[0]) == -1: # .find() returns -1 if not found. 
     print(f"The {dnaCodons[0]} codon was NOT found in the generated sequence.\n")
 else: 
-    print(f"The {dnaCodons[0]} codon was found!  It starts an index {dnaSequence.find(dnaCodons[0])}.\n")
+    print(f"The {dnaCodons[0]} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodons[0])}.\n") # Return the index of the first instance of the codon.  
+
+if dnaSequence.find(dnaCodons[1]) == -1:
+    print(f"The {dnaCodons[1]} codon was NOT found in the generated sequence.\n")
+else: 
+    print(f"The {dnaCodons[1]} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodons[1])}.\n")
