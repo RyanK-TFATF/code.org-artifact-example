@@ -31,3 +31,8 @@ while basesGenerated <= 100: # The teacher will specify how many bases to genera
     basesGenerated += 1 # Increment the number of bases generated. 
 
 print(dnaSequence) # Print the sequence to verify proper generation. 
+
+if dnaSequence.find(dnaCodons[0]) == -1:
+    print(f"The {dnaCodons[0]} codon was NOT found in the generated sequence.\n")
+else: 
+    print(f"The {dnaCodons[0]} codon was found!  It starts an index {dnaSequence.find(dnaCodons[0])}.\n")
