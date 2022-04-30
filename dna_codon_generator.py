@@ -12,3 +12,5 @@ dnaCodons = ["ATG", "TAG"]
 dnaSequence = "" 
 # Create an empty string variable to store the DNA sequence. 
 
+basesGenerated = 0
+# Variable to count how many bases have been generated. 
