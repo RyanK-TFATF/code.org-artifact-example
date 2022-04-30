@@ -27,3 +27,5 @@ while basesGenerated <= 100: # The teacher will specify how many bases to genera
     else:
         nextBase = dnaBases[3] # This references the fourth element in the dnaBases list. 
     
+    dnaSequence += nextBase # Add the generated base to the dnaSequence string.  
+    basesGenerated += 1 # Increment the number of bases generated. 
