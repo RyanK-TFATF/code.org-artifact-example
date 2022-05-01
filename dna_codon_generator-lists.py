@@ -1,4 +1,4 @@
-# Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact, v0.5b
+# Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact, v1.0
 
 # Import the random module to allow for random integer generation to simulate rolling the d4.
 import random 
@@ -12,7 +12,6 @@ dnaCodons = ["ATG", "TAG", "GAT", "TTT", "AGC"]
 
 # Create an empty string variable to store the DNA sequence. 
 dnaSequence = "" 
-
 
 # Variable to count how many bases have been generated. 
 basesGenerated = 0
