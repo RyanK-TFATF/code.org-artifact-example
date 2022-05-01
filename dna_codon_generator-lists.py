@@ -3,8 +3,7 @@
 # Import the random module to allow for random integer generation to simulate rolling the d4.
 import random 
 
-dnaBases = ["A", "G", "C", "T"]
-# Adenine, Guanine, Cytosine, Thymine
+dnaBases = ["A", "G", "C", "T"] # Adenine, Guanine, Cytosine, Thymine
 
 dnaCodons = ["ATG", "TAG", "GAT", "TTT", "AGC"]
 # ATG is the START codon, TAG is one of the stop codons.  
@@ -21,7 +20,7 @@ requestedBases = int(input("How many DNA bases do you require in the sequence?  
 
 # while loop to generate the DNA sequence. 
 while basesGenerated < requestedBases: 
-    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number, start with 0 instead of 1 to ensure first element can be selected. 
+    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number.
     basesGenerated += 1 # Increment the number of bases generated. 
     
 print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 

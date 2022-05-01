@@ -1,5 +1,5 @@
-# Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Non-Example Artifact, v1.0
-# This example code will be used by the teacher to demonstrate an example of the same program that does not utilize lists. 
+# Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact, v1.0
+# This code will be created during Lesson 2.  
 
 import random 
 
@@ -26,11 +26,13 @@ basesGenerated = 0
 # Variable to control while loop, allows user to specify the number of bases to generate. 
 requestedBases = int(input("How many DNA bases do you require in the sequence?  Type an integer value and press ENTER.\n"))
 
-while basesGenerated <= requestedBases: # The teacher will specify how many bases to generate.  
-    randomBase = int(random.randint(0,3)) # This simulates rolling the d4 to get a random number, start with 0 instead of 1 to ensure first element can be selected. 
+# Variable to record the randomly generated number to pick a base, models the die roll from the Lesson 1 in class activity. 
+
+while basesGenerated < requestedBases: 
+    randomBase = int(random.randint(1,4)) 
     
     # if-elif-else to determine which base to add. 
-    if randomBase == 0:
+    if randomBase == 1:
         nextBase = dnaBase0 # This references the first element in the dnaBases list. 
     elif randomBase == 2:
         nextBase = dnaBase1 # This references the second element in the dnaBases list. 
