@@ -1,6 +1,5 @@
 # Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact, v1.0
-# This code will be created during Lesson 2.  
-
+# This code will be created during Lesson 2.   
 import random 
 
 # DNA Bases
@@ -8,7 +7,6 @@ dnaBase0 = "A" # Adenine
 dnaBase1 = "T" # Thymine
 dnaBase2 = "G" # Guanine
 dnaBase3 = "C" # Cytosine
-
 
 # DNA Codons
 dnaCodon0 = "ATG"
@@ -27,6 +25,7 @@ basesGenerated = 0
 requestedBases = int(input("How many DNA bases do you require in the sequence?  Type an integer value and press ENTER.\n"))
 
 # Variable to record the randomly generated number to pick a base, models the die roll from the Lesson 1 in class activity. 
+randomBase = 0 
 
 while basesGenerated < requestedBases: 
     randomBase = int(random.randint(1,4)) 
@@ -43,8 +42,7 @@ while basesGenerated < requestedBases:
     
     dnaSequence += nextBase
     basesGenerated += 1 # Increment the number of bases generated. 
-    
-    
+        
 print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 
 
 if dnaSequence.find(dnaCodon0) == -1: # .find() returns -1 if not found. 
@@ -66,5 +64,4 @@ else:
 if dnaSequence.find(dnaCodon4) == -1: # .find() returns -1 if not found. 
     print(f"The {dnaCodon4} codon was NOT found in the generated sequence.\n")
 else: 
-    print(f"The {dnaCodon4} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodon4)}.\n") # Return the index of the first instance of the codon.  
-    
+    print(f"The {dnaCodon4} codon was found!  The first instance starts at index {dnaSequence.find(dnaCodon4)}.\n") # Return the index of the first instance of the codon.      

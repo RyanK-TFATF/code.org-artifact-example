@@ -1,4 +1,5 @@
 # Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact, v1.0
+# This code represents the revised code using lists created during Lesson 3 and Lesson 4 if needed.
 
 # Import the random module to allow for random integer generation to simulate rolling the d4.
 import random 
@@ -20,10 +21,10 @@ requestedBases = int(input("How many DNA bases do you require in the sequence?  
 
 # while loop to generate the DNA sequence. 
 while basesGenerated < requestedBases: 
-    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number, start with 0 so that the first element has a chance to be selected. 
+    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates picking the base at random and adding it to the sequence.  Start with 0 so the first element can be chosen! 
     basesGenerated += 1 # Increment the number of bases generated. 
     
-print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 
+print(f"\nGenerated DNA Sequence: \n{dnaSequence}\n\n") # Print the sequence to verify proper generation. 
 
 # Using a list for the codons allows for the use of a for loop to search for each codon. 
 for i in range(0, len(dnaCodons)):
