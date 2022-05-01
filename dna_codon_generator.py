@@ -1,4 +1,4 @@
-# Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact 
+# Ryan Kelley, 2022 code.org 6-12 Curriculum Development Manager Example Artifact, v0.4.1b
 
 import random 
 
@@ -15,9 +15,10 @@ dnaSequence = ""
 basesGenerated = 0
 # Variable to count how many bases have been generated. 
 
-while basesGenerated <= 100: # The teacher will specify how many bases to generate.  
-    randomBase = int(random.randint(1,4)) # This simulates rolling the d4 to get a random number. 
-
+while basesGenerated <= 10: # The teacher will specify how many bases to generate.  
+    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number, start with 0 instead of 1 to ensure first element can be selected. 
+    basesGenerated += 1 # Increment the number of bases generated. 
+    """"
     if randomBase == 1:
         nextBase = dnaBases[0] # This references the first element in the dnaBases list. 
     elif randomBase == 2:
@@ -26,10 +27,8 @@ while basesGenerated <= 100: # The teacher will specify how many bases to genera
         nextBase = dnaBases[2] # This references the third element in the dnaBases list. 
     else:
         nextBase = dnaBases[3] # This references the fourth element in the dnaBases list. 
+    """
     
-    dnaSequence += nextBase # Add the generated base to the dnaSequence string.  
-    basesGenerated += 1 # Increment the number of bases generated. 
-
 print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 
 
 for i in range(0, len(dnaCodons)):
