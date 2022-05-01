@@ -20,7 +20,7 @@ requestedBases = int(input("How many DNA bases do you require in the sequence?  
 
 # while loop to generate the DNA sequence. 
 while basesGenerated < requestedBases: 
-    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number.
+    dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number, start with 0 so that the first element has a chance to be selected. 
     basesGenerated += 1 # Increment the number of bases generated. 
     
 print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 
