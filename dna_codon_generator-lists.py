@@ -19,12 +19,14 @@ basesGenerated = 0
 # Variable to control while loop, allows user to specify the number of bases to generate. 
 requestedBases = int(input("How many DNA bases do you require in the sequence?  Type an integer value and press ENTER.\n"))
 
-while basesGenerated < requestedBases: # The teacher will specify how many bases to generate.  
+# while loop to generate the DNA sequence. 
+while basesGenerated < requestedBases: 
     dnaSequence += dnaBases[int(random.randint(0,3))] # This simulates rolling the d4 to get a random number, start with 0 instead of 1 to ensure first element can be selected. 
     basesGenerated += 1 # Increment the number of bases generated. 
     
 print(f"\nGenerated DNA Sequence: {dnaSequence}\n\n") # Print the sequence to verify proper generation. 
 
+# Using a list for the codons allows for the use of a for loop to search for each codon. 
 for i in range(0, len(dnaCodons)):
     if dnaSequence.find(dnaCodons[i]) == -1: # .find() returns -1 if not found. 
         print(f"The {dnaCodons[i]} codon was NOT found in the generated sequence.\n")
