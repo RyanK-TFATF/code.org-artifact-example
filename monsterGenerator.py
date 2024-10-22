@@ -2,7 +2,7 @@
 # This lesson focuses on demonstrating a method of creating random monsters in a game.  The code itself focuses on proper use of lists, while loops, methods, and code documentation.
 
 # Module Imports -- Import critical modules first so they are available to the rest of your code. 
-import random, time 
+import random
 
 # MONSTER INFORMATION 
 
@@ -22,7 +22,7 @@ monsterClass = [
     "Healer"    
 ]
 
-monsterPrefix = [
+monsterAdjective = [
     "Fire-Breathing",
     "Gargantuan",
     "Invisible",
@@ -32,7 +32,7 @@ monsterPrefix = [
 ]
 
 # Multiply the number of options from each category to get the total number of possible names.  
-numPossible = len(monsterClass) * len(monsterType) * len(monsterPrefix) 
+numPossible = len(monsterClass) * len(monsterType) * len(monsterAdjective) 
 
 # Create an empty list to store the names. 
 monsterNames = []
@@ -41,12 +41,12 @@ monsterNames = []
 while len(monsterNames) < numPossible: # Execute the loop until we have generated all possible options. 
 
     # Randomly choose one of each option to create a new monster. 
-    monsterPrefixGen = random.choice(monsterPrefix)    
+    monsterAdjectiveGen = random.choice(monsterAdjective)    
     monsterTypeGen = random.choice(monsterType)    
     monsterClassGen = random.choice(monsterClass)     
          
     # Use string concatenation to create a new monster name. 
-    newmonster = monsterPrefixGen + " " + monsterTypeGen  + " " + monsterClassGen 
+    newmonster = monsterAdjectiveGen + " " + monsterTypeGen  + " " + monsterClassGen 
     
     # Check to see if newmonster already exists in the list of names. 
     if newmonster in monsterNames: # If it's there, print an error message. 
